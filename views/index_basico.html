@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block modals %}
+    {% include 'modal_login.html' %}
+    <div class="modal modal_buscar" id="modal_buscar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button onclick="$('#modal_buscar').hide();" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="input-group div_buscar">
+                        <input type="text" class="form-control" id="id_buscar2" placeholder="Buscar por...">
+                        <span class="input-group-btn">
+                         <button class="btn btn-secondary" onclick="buscar2();" id="btn_buscar2" style="background-color: white;" type="button">
+                           <span class="glyphicon glyphicon-search text-muted"></span></button></span>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block aside %}
+<div id="menu" class="menu col-md-3 col-lg-3 col-xs-1 col-sm-1 sidebar">
+    <div id="menu_opciones_top" class="nav nav-sidebar">
+        <a href=""><span class="glyphicon glyphicon-align-justify"></span></a><br>
+        <div class="input-group div_buscar hidden-xs hidden-sm">
+            <input type="text" class="form-control" id="id_buscar" placeholder="Buscar por...">
+            <span class="input-group-btn">
+                <button class="btn btn-secondary" onclick="buscar();" id="btn_buscar" style="background-color: white;" type="button">
+                    <span class="glyphicon glyphicon-search text-muted"></span></button>
+            </span>
+        </div>
+    </div>
+
+
+    <ul class="nav nav-sidebar">
+        <li class="hidden-md hidden-lg"><a onclick="$('#modal_buscar').show();" href="#" class="buscar"><span class="glyphicon glyphicon-search"></span></a><li>
+        <li><a href="#" class="albumes"><span class="glyphicon glyphicon-cd"></span><span class="hidden-xs hidden-sm"> Álbumes</span></a><li>
+        <li><a href="#" class="artistas"><span class="glyphicon glyphicon-user"></span> <span class="hidden-xs hidden-sm"> Artistas</span></a><li>
+        <li><a href="#" class="canciones"><span class="glyphicon glyphicon-music"></span><span class="hidden-xs hidden-sm"> Canciones</span></a><li>
+        <li><a href="#" class="reproduccion_en_curso"><span class="glyphicon glyphicon-stats"></span><span class="hidden-xs hidden-sm"> Reproducción en curso</span></a><li>
+    </ul>
+    <hr>
+    <ul  class="nav nav-sidebar">
+        <li><a class="login" href="#"><span class="glyphicon glyphicon-log-in"></span><span class="hidden-xs hidden-sm"> Iniciar session</span></a></li>
+
+    </ul>
+
+</div>
+{% endblock %}
+
+
+{% block section %}
+{% include 'section.html' %}
+{% endblock %}
+
+
+{% block footer %}
+<div id="barra_opciones" class="navbar navbar-fixed-bottom">
+
+    <div id="datos_song" class="col-xs-10 col-sm-10 col-md-10 col-lg-10    pull-left">
+        <img id="img_album_pekenno" class="pull-left"/>
+        <div class="pull-right" id="datos_rep_pekenno"></div>
+        <p id="titulo_rep_song"></p>
+        <small id="artistaa_rep_song"></small>
+        <small id="album_rep_song" hidden></small>
+        <small id="id_rep_song" hidden></small>
+    </div>
+
+</div>
+{% endblock %}
+
+
+
+
+
+

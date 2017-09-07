@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block modals %}
+    {% include 'modal_rutas.html' %}
+    {% include 'modal_login.html' %}
+    <div class="modal modal_buscar" id="modal_buscar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="$('#modal_buscar').hide();" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="input-group div_buscar">
+                    <input type="text" class="form-control" id="id_buscar2" placeholder="Buscar por...">
+                    <span class="input-group-btn">
+                         <button class="btn btn-secondary" onclick="buscar2();" id="btn_buscar2" style="background-color: white;" type="button">
+                           <span class="glyphicon glyphicon-search text-muted"></span></button></span>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+{% block aside %}
+    <div id="menu" class="menu col-md-3 col-lg-3 col-xs-1 col-sm-1 sidebar">
+        <div id="menu_opciones_top" class="nav nav-sidebar">
+            <a href=""><span class="glyphicon glyphicon-align-justify"></span></a><br>
+            <div class="input-group div_buscar hidden-xs hidden-sm">
+                <input type="text" class="form-control" id="id_buscar" placeholder="Buscar por...">
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary" onclick="buscar();" id="btn_buscar" style="background-color: white;" type="button">
+                        <span class="glyphicon glyphicon-search text-muted"></span></button>
+                </span>
+            </div>
+        </div>
+
+
+        <ul class="nav nav-sidebar">
+            <li class="hidden-md hidden-lg"><a onclick="$('#modal_buscar').show();" href="#" class="buscar"><span class="glyphicon glyphicon-search"></span></a><li>
+            <li><a href="#"  class="albumes"><span class="glyphicon glyphicon-cd"></span><span class="hidden-xs hidden-sm"> Álbumes</span></a><li>
+            <li><a href="#" class="artistas"><span class="glyphicon glyphicon-user"></span> <span class="hidden-xs hidden-sm"> Artistas</span></a><li>
+            <li><a href="#" class="canciones"><span class="glyphicon glyphicon-music"></span><span class="hidden-xs hidden-sm"> Canciones</span></a><li>
+            <li><a href="#" class="reproduccion_en_curso"><span class="glyphicon glyphicon-stats"></span><span class="hidden-xs hidden-sm"> Reproducción en curso</span></a><li>
+        </ul>
+        <hr>
+        <ul  class="nav nav-sidebar">
+            <li><a class="rutas" href="#"><span class="glyphicon glyphicon-cloud"></span> <span class="hidden-xs hidden-sm"> Configuración</span></a></li>
+            <li><a class="logout" href="#"> <span class="glyphicon glyphicon-log-out"></span> <span class="hidden-xs hidden-sm"> Cerrar sessión</span></a></li>
+
+        </ul>
+
+    </div>
+{% endblock %}
+
+
+
+
+
+{% block section %}
+    {% include 'section.html' %}
+{% endblock %}
+
+
+{% block footer %}
+    <div id="barra_opciones" class="navbar navbar-fixed-bottom">
+
+        <div id="datos_song" class="col-md-3 col-lg-3 hidden-xs hidden-sm  pull-left">
+            <img id="img_album_pekenno" class="pull-left"/>
+            <div class="pull-right" id="datos_rep_pekenno"></div>
+            <p id="titulo_rep_song"></p>
+            <small id="artistaa_rep_song"></small>
+            <small id="album_rep_song" hidden></small>
+            <small id="id_rep_song" hidden></small>
+        </div>
+
+        <div id="rep_song" class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pull-left">
+            <audio onended="set_song_curso('siguiente',null);" ontimeupdate='updateTrackTime();' id="audio"  type="audio/mpeg"></audio>
+
+            <div id="current_time" class="col-xs-2 col-sm-1 pull-left">0:00</div>
+            <div id="progress" class="col-xs-8 col-sm-9 col-md-10 col-lg-10 pull-left">
+                <input  id="barra_reproduccion" type="range" min="0" max="100" value="0" step="1" onchange="updateprogresss();">
+            </div>
+             <div id="duracion_song" class="col-xs-2 col-sm-1 pull-left">0:00</div>
+        </div>
+
+
+
+
+
+
+        <div id="controles_song" class="col-xs-12 col-sm-8 col-md-4 col-lg-4 pull-right">
+            <ul>
+                <li><a id="back" href="#"><span class="glyphicon glyphicon-step-backward"></span></a></li>
+                <li  id="li_play"><a id="play" href="#"><span id="ico_play_pause" class="glyphicon glyphicon-play"></span></a></li>
+                <li  id="li_pause"><a id="pause" href="#" ><span class="glyphicon glyphicon-pause"></span></a></li>
+                <li><a id="next" href="#"><span class="glyphicon glyphicon-step-forward"></span></a></li>
+                <li id="dropup_vol" class="dropup">
+                     <a id="ico_vol"  href="#" data-toggle="dropdown" class="dropdown-toggle glyphicon glyphicon-volume-up text_vol" aria-haspopup="true" aria-expanded="false"></a>
+                     <ul id="ul_vol" class="dropdown-menu dropdown-menu-right" aria-labelledby="ico_vol">
+                            <li id="div_vol">
+                                <div class="col-xs-1">
+                                    <a id="a_mutex" onclick="set_muted();" class="glyphicon glyphicon-volume-up"></a>
+                                </div>
+                                <div class="col-xs-9">
+                                    <input  onchange="updatevolumen();" id="barra_volumen" min="0" max="100" value="100" type="range">
+                                </div>
+                            </li>
+                    </ul>
+                </li>
+                <li name="100" id="text_vol" class="text_vol"></li>
+                <li><a id="ramdom" onclick="set_ramdom(); "href="#"><span class="glyphicon glyphicon-random"></span></a></li>
+                <li><a id="loop" onclick="set_loop();" href="#"><span class="glyphicon glyphicon-repeat"></span></a></li>
+            </ul>
+        </div>
+
+
+    </div>
+{% endblock %}
+
+
+
+
+
+

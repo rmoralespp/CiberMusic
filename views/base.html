@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>CiberMusic</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Rolando Morales Perez">
+
+
+    <!-- Bootstrap  -->
+    <link href="/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href= "/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href= "/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+
+    <!-- Bootstrap  Validator-->
+    <link href= "/plugins/bootstrapValidator/css/bootstrapValidator.css" rel="stylesheet">
+    <link href="/plugins/bootstrapValidator/css/bootstrapValidator.min.css" rel="stylesheet">
+
+
+    <!-- Inclusion de las personalizaciones estaticas -->
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/rutas.css" rel="stylesheet">
+    <link href="/css/section.css" rel="stylesheet">
+    <link href="/css/navbar.css" rel="stylesheet">
+
+
+    <!-- jQuery -->
+    <script src="/plugins/jquery/jquery.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- mis validaciones -->
+
+    <script src="/js/main.js"></script>
+    <script src="/js/view_albumes.js"></script>
+    <script src="/js/view_artistas.js"></script>
+    <script src="/js/view_canciones.js"></script>
+    <script src="/js/view_rutas.js"></script>
+    <script src="/js/view_rep_curso.js"></script>
+    <script src="/js/view_buscar.js"></script>
+
+
+    <!-- Bootstrap  Validator-->
+    <script src="/plugins/bootstrapValidator/js/bootstrapValidator.js"></script>
+    <script src="/plugins/bootstrapValidator/js/bootstrapValidator.min.js"></script>
+    <script src="/plugins/jquery/jquery.validate.js"></script>
+
+</head>
+
+<body>
+
+    <div id="row_sectio_up" class="row">
+        {% block nav %} {% endblock %}
+        {% block aside %} {% endblock %}
+        {% block section %} {% endblock %}
+        {% block modals %} {% endblock %}
+    </div>
+
+    <div class="row">
+        {% block footer %} {% endblock %}
+    </div>
+
+
+
+</body>
+
+</html>

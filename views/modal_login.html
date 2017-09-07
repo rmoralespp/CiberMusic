@@ -1,0 +1,30 @@
+
+<!-- Modal -->
+<div class="modal modal_rutas" id="modal_login" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>
+                    Escriba la contraseña de administración para iniciar sessión
+                </h3>
+
+
+            </div>
+            <div class="modal-body">
+
+                <div  id="login_formm">
+                    <label for="id_password" class="label label-default">Contraseña</label>
+                    <input class="form-control" type="password" name="password" id="id_password" placeholder="Escriba la contraseña">
+                </div>
+                <div class="row" id="sms_login"></div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="id_login" class="btn-ruta_listo" onclick="login();">Aceptar</button>
+                <button type="button" class="btn-ruta_listo" onclick="$('#modal_login').hide();">Cerrar</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

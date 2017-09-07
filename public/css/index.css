@@ -1,0 +1,75 @@
+body {
+font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+
+#menu_opciones_top {
+  margin-top: 40px;
+}
+
+#menu_opciones_top a {
+  margin-left: 20px;
+}
+
+
+#menu a,#menu2 a {
+ color: #444444;
+}
+
+#menu2 a{
+  margin-left: 10px;
+}
+
+
+#menu ul li,#menu2 ul li {
+  margin-top: 15px;
+}
+
+#menu_buscar_song{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 3px solid gray;
+  height: 34px;
+  width: 88%;
+}
+
+.div_buscar{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#img_menu_buscar_song{
+  width: 20%;
+  margin-top: 20px;
+  color: gray;
+
+
+}
+
+#menu hr, #menu2 hr {
+  background-color: darkgrey;
+  height: 1px;
+}
+
+
+
+
+
+
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px; /* 20px padding + 1px border */
+  margin-left: -20px;
+}
+
+
+
+a:link {
+  text-decoration:none;
+}
+
+
+

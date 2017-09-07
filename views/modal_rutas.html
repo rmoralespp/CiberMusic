@@ -1,0 +1,29 @@
+
+    <!-- Modal -->
+    <div class="modal modal_rutas" id="modal_rutas" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>
+                            Crea tu colección a partir de tus archivos de música locales
+                        </h3>
+                        <h4>Ahora mismo, estamos buscando en estas carpetas:</h4>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="row" id="rutas_modal" style="max-height: 200px;overflow-y: auto;"></div>
+                        <div  id="nueva_ruta_formm" style="margin-top: 10px;">
+                            <label class="label label-default">Ruta</label>
+                            <input class="form-control" type="text" name="ruta" id="id_ruta" placeholder="escriba la ruta">
+                            <input class="btn-ruta_listo" required type="button" onclick="cargar_nueva_ruta();" id="cargar_nueva_ruta" class="btn btn-info" value="Aceptar">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-ruta_listo" onclick="$('#modal_rutas').hide();">Cerrar</button>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+

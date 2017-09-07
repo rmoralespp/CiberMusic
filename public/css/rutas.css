@@ -1,0 +1,62 @@
+
+
+.modal_rutas .modal-content, .modal_buscar .modal-content{
+    border-radius: 0px !important;
+    border: 2px solid  #5bc0de !important;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 0px #ffffff;
+    overflow-y: auto;
+}
+
+
+.modal_rutas .rutas_modal{
+    overflow-y: auto;
+}
+
+
+.ruta{
+    background-color: #aeaeae;
+    margin: 15px;
+    padding: 20px;
+    font-size: 15px;
+    width: 200px;
+    height: 80px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+}
+
+.rutanueva{
+    padding: 24px;
+}
+
+.ruta a{
+    color: black;
+}
+
+
+#nueva_ruta_div {
+    border: 3px solid black !important;
+    border-radius: 50%;
+    padding: 6px;
+    margin-left: 55px;
+    font-size: 25px;
+    color: black;
+}
+
+
+
+.btn-ruta_listo{
+    border: 2px solid #175dff !important;
+    background-color:  #157fff!important;
+    color: white;
+    padding: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 17px;
+}
+
+
+#nueva_ruta_form{
+    padding: 15px;
+}

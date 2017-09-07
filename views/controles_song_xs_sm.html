@@ -1,0 +1,25 @@
+
+<div id="controles_song" class="col-xs-12 col-sm-12 hidden-md hidden-lg pull-left">
+    <ul>
+        <li><a id="back" href="#"><span class="glyphicon glyphicon-step-backward"></span></a></li>
+        <li  id="li_play"><a id="play" href="#"><span id="ico_play_pause" class="glyphicon glyphicon-play"></span></a></li>
+        <li  id="li_pause"><a id="pause" href="#" ><span class="glyphicon glyphicon-pause"></span></a></li>
+        <li><a id="next" href="#"><span class="glyphicon glyphicon-step-forward"></span></a></li>
+        <li id="dropup_vol" class="dropup">
+            <a id="ico_vol"  href="#" data-toggle="dropdown" class="dropdown-toggle glyphicon glyphicon-volume-up text_vol" aria-haspopup="true" aria-expanded="false"></a>
+            <ul id="ul_vol" class="dropdown-menu dropdown-menu-right" aria-labelledby="ico_vol">
+                <li id="div_vol">
+                    <div class="col-xs-1">
+                        <a id="a_mutex" onclick="set_muted();" class="glyphicon glyphicon-volume-up"></a>
+                    </div>
+                    <div class="col-xs-9">
+                        <input onmousemove="updatevolumen();" id="barra_volumen" min="0" max="100" value="100" type="range">
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li name="100" id="text_vol" class="text_vol"></li>
+        <li><a id="ramdom" onclick="set_ramdom(); "href="#"><span class="glyphicon glyphicon-random"></span></a></li>
+        <li><a id="loop" onclick="set_loop();" href="#"><span class="glyphicon glyphicon-repeat"></span></a></li>
+    </ul>
+</div>

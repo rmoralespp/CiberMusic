@@ -1,0 +1,240 @@
+header
+{
+    padding-top: 2%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 5%;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    top: 0;
+}
+
+
+.header_basico{
+    background-color: white !important;
+}
+
+.header_lista_curso{
+
+}
+
+header a{
+    color: #393939;
+}
+
+header a:hover,.fila_song_curso{
+    color: #136ce3;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+
+.header_reproduccion_en_curso > h1,.header_reproduccion_en_curso  h3{
+    color: white;
+    font-family: Calibri !important;
+}
+
+.header_reproduccion_en_curso > h1{
+    margin-bottom: 50px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 8%;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 15px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    background-color: #f5f5f5;
+    border-right: 1px solid #eee;
+    min-width: 65px;
+}
+
+#canvas {
+    height: 73%;
+    position: fixed;
+    overflow-y: auto;
+    right: 0;
+}
+
+.canvas_basico{
+    transform: translate(0%, 25%);
+}
+
+.canvas_lista_curso{
+    transform: translate(0%, 60%);
+
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 768px) {  }
+
+@media (max-width: 768px) {
+
+    .titulo_sartista_album h3, .titulo_sartista_album h4{
+        font-size: 15px;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+
+
+.datos_album_song{
+    margin-bottom: 40px;
+    margin-right: 10px;
+    height: 200px;
+    width: 200px;
+    padding: 15px;
+}
+
+.albumm:hover{
+    background-color: gray;
+}
+
+
+.caratula_album {
+    background-color: lightgrey;
+    height: 170px;
+    width: 170px;
+    margin-bottom: 10px;
+}
+
+.album_texto {
+    color: #2e2e2e;
+}
+
+.album_sub_texto{
+   font-size: 12px;
+}
+
+
+
+
+.caratula_album_header{
+    margin-right: 20px;
+    height: 170px;
+    width: 200px;
+
+
+}
+
+.opciones_album li{
+    margin-right: 50px;
+}
+
+
+
+table,table td,table th{
+    border: hidden;
+}
+
+.td_text_muted{
+    color: #a4a4a4;
+}
+
+
+
+tr{
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+
+tr:hover {
+
+    background-color: gray !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+
+
+
+.opcion_fila{
+    margin-left: 30px;
+    color: white;
+}
+
+
+.fila_active, tr:active {
+   background-color: #136ce3 !important;
+    color: white;
+}
+
+.ul_dropdown li a:hover{
+    color: #136ce3 !important;
+}
+
+#lista_add_song li{
+    list-style: none;
+}
+
+
+
+.div_album_artist{
+   margin-bottom: 20px;
+}
+
+
+.borde_rojo {
+ border: 3px solid darkred !important;
+}
+
+#id_password, #btn_buscar, #id_buscar, #id_ruta,  #btn_buscar2, #id_buscar2{
+    border: 3px solid gray;
+    border-radius: 0px !important;
+}
+
+#id_buscar, #id_buscar2{
+    border-top: 3px solid gray;
+    border-left: 3px solid gray;
+    border-bottom: 3px solid gray;
+    border-right: inherit;
+    border-radius: 0px !important;
+    height: 100%;
+
+}
+
+#btn_buscar, #btn_buscar2{
+
+    border-top: 3px solid gray;
+    border-right: 3px solid gray;
+    border-bottom: 3px solid gray;
+    border-left: inherit;
+    border-radius: 0px !important;
+}
+
+
+#loading {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 40%;
+    left: 60%;
+}
+
+
+

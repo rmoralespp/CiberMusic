@@ -1,0 +1,10 @@
+{
+  "albumes":[],
+  "rutas":[],
+  "songs":[],
+  "lista_curso":[],
+  "ultimo_id_lista_curso":0,
+  "ultimo_id":0,
+  "song_curso":{"id":0},
+  "config":{"vol":"1","loop":false,"ramdom":false, "muted": false, "password": "12345"}
+ }
